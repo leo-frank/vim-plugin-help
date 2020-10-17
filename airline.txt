@@ -1,0 +1,42 @@
+今天来介绍的是vim-airline。
+vim-airline是对powerline的改进，完全用vimscript实现。当这个插件安装完毕的时候，将会在每个窗口的底部显示漂亮的status line。
+vim-airline底部的状态栏的样式可以自己设定。
+vim-airline包括一些扩展，但是并没有被默认使用。比如tabline扩展，这个扩展用于在vim的窗口顶部显示信息。
+
+Features:
+小巧的核心却可以充分扩展。
+可以和多个流行的插件合作使用。
+在常规字体下看上去不错，但如果用unicode或者powerline字体会使得看起来更好。
+速度很快。
+只要你懂一点关于status line的语法，就可以轻松的修改statues line的设置。
+为vim-airline写theme很方便。
+
+Name:
+在飞机上完成的一个插件，而且这个插件就像air一样轻。
+
+Configuration:
+theme:
+  默认只安装了dark theme，如果你想要更多的theme，访问github.com/vim-airline/vim-airline-themes。
+  theme默认是随着colorscheme而改变的，但如果你想覆盖掉，可以用这个选项：
+  let g:airline_theme='dark'
+
+
+Commands:
+AirlineTheme {theme}:
+  切换主题。{theme}也可以是random，系统将会随机换一个主题。
+AirlineToggle:
+  切换到标准的status line，也就是没有airline插件的模式。也可以切换回来。
+AirlineExtentions：
+  展示所有可用扩展的使用情况。extern意味着这个扩展并非和airline捆绑。
+
+
+Extensions:
+展示tabline：这个选项默认为0，修改为1。
+  let g:airline#extensions#tabline#enabled = 1
+设置tabline的格式：默认情况下tabline是右箭头和左箭头的形式，我们可以自己修饰。
+  let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = '|'
+  let g:airline#extensions#tabline#right_sep = ' '
+  let g:airline#extensions#tabline#right_alt_sep = '|'
+设置tabline中buffer显示的格式：默认情况下不太好看，我个人觉得short_path比较好看。
+  let g:airline#extensions#tabline#formatter = 'short_path'
