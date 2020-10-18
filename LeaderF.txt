@@ -1,0 +1,20 @@
+LeaderF：This plugin is mainly used for locating files, buffers, mrus, tags in large project.
+
+Requirements
+  vim7.3 or higher. Only support vim7.4.330 or higher after v1.01.
+  Python2.7+ or Python3.1+.
+  To use the popup mode, neovim 0.42+ or vim 8.1.1615+ are required.
+  
+大小写：
+  如果输入的都是小写，那么不区分大小写。
+  如果输入有大写字符，那么该大写字符必须匹配大写，其余字符依然不区分大小写。
+  
+Options:
+g:Lf_ShortcutF:
+  寻找files的快捷键，默认是<leader>f
+g:Lf_ShortcutB:
+  寻找buffer的快捷键，默认是<leader>b
+g:Lf_WindowHeight:
+  设置搜索窗口的高度，默认是0.5，我个人觉得有点大了。
+g:Lf_CacheDirectory：
+  设置cache所存放文件夹，一般无需要改变
